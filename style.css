@@ -90,22 +90,30 @@ MOON
 ==========================*/
 
 .moon{
-
 position:fixed;
-
-top:50px;
-
-right:60px;
-
-width:140px;
-
-animation:moon 5s ease-in-out infinite;
-
+top:40px;
+right:35px;
+width:90px;
+z-index:999;
+pointer-events:none;
 filter:
+drop-shadow(0 0 35px gold);
+animation:moonFloat 6s ease-in-out infinite;
+}
 
-drop-shadow(0 0 40px gold);
+@keyframes moonFloat{
 
-z-index:-5;
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
 
 }
 
