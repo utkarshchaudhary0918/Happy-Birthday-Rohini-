@@ -888,3 +888,20 @@ transform:translateY(0);
 }
 
 }
+
+.zoom{
+
+transform:scale(1.08);
+
+box-shadow:0 0 35px gold;
+
+transition:.4s;
+
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:25px;
+}
