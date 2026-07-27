@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday Rohini ❤️</title>
@@ -11,23 +13,27 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<div class="sky"></div>
+
 <div class="stars"></div>
 
-<div class="gradient"></div>
+<div class="goldGlow"></div>
 
 <img src="assets/moon.png" class="moon">
 
-<section class="hero">
+<!-- SCENE 1 -->
 
-<div class="heroText">
+<section class="scene active" id="scene1">
 
-<h3>✨ A Special Day ✨</h3>
+<div class="hero">
+
+<h4>✨ A Special Night ✨</h4>
 
 <h1>Happy Birthday</h1>
 
@@ -35,17 +41,15 @@
 
 <p>
 
-Some people make life brighter just by existing.
+Tonight is about celebrating you.
 
-Today is your day.
-
-I made this little surprise just for you.
+Every click unlocks another surprise.
 
 </p>
 
-<button id="startBtn">
+<button id="begin">
 
-Begin Surprise 🎉
+Begin Surprise ✨
 
 </button>
 
@@ -53,29 +57,37 @@ Begin Surprise 🎉
 
 </section>
 
-<section class="cakePage" id="cakePage">
+<!-- SCENE 2 -->
 
-<h2>Make A Wish ✨</h2>
+<section class="scene locked" id="scene2">
+
+<h2>Make A Wish ❤️</h2>
 
 <p>
 
 Close your eyes...
 
-Take a deep breath...
-
-And blow the candle ❤️
+Then blow the candle.
 
 </p>
 
-<div class="cakeHolder">
+<div class="cakeWrap">
 
-<img src="assets/cake.png" class="cake">
+<img src="assets/cake.png"
 
-<div class="flame" id="flame"></div>
+class="cake">
+
+<div class="flame"
+
+id="flame"></div>
+
+<div class="smoke"
+
+id="smoke"></div>
 
 </div>
 
-<button id="blowBtn">
+<button id="blow">
 
 Blow Candle 🎂
 
@@ -83,13 +95,23 @@ Blow Candle 🎂
 
 </section>
 
-<section class="giftPage" id="giftPage">
+<!-- SCENE 3 -->
 
-<h2>Your Birthday Gift 🎁</h2>
+<section class="scene locked"
 
-<p>Tap the gift to open it.</p>
+id="scene3">
 
-<div class="giftArea">
+<h2>Your Gift ❤️</h2>
+
+<p>
+
+Tap the gift.
+
+</p>
+
+<div class="giftContainer">
+
+<div class="goldLight"></div>
 
 <img src="assets/giftbox.png"
 
@@ -99,99 +121,103 @@ id="giftClosed">
 
 id="giftOpen">
 
-</div>
+<div class="letter"
 
-</section>
+id="letter">
 
-<section class="messagePage">
+<div class="paper">
 
-<div class="card">
+<h3>Dear Rohini ❤️</h3>
 
-<h2>Dear Rohini ❤️</h2>
+<p id="typed"></p>
 
-<p>
+<button id="continue">
 
-Happy Birthday.
-
-May your smile never fade.
-
-May your dreams come true.
-
-May happiness always find you.
-
-You deserve all the beautiful things life has to offer.
-
-Thank you for being amazing.
-
-Have the happiest birthday ever.
-
-🎂❤️✨
-
-</p>
-
-<button id="galleryBtn">
-
-Continue 📸
+Continue ❤️
 
 </button>
 
 </div>
 
+</div>
+
+</div>
+
 </section>
 
-<section class="galleryPage"
+<!-- SCENE 4 -->
 
-id="gallery">
+<section class="scene locked"
 
-<h2>Some Beautiful Pics ❤️</h2>
+id="scene4">
+
+<h2>Some Beautiful Memories ❤️</h2>
 
 <div class="polaroids">
 
-<div class="polaroid p1">
+<div class="photo p1">
 
 <img src="assets/photos/1.jpg">
 
 </div>
 
-<div class="polaroid p2">
+<div class="photo p2">
 
 <img src="assets/photos/2.jpg">
 
 </div>
 
-<div class="polaroid p3">
+<div class="photo p3">
 
 <img src="assets/photos/3.jpg">
 
 </div>
 
-<div class="polaroid p4">
+<div class="photo p4">
 
-<img src="assets/photos/4.JPG">
+<img src="assets/photos/4.jpg">
+
+</div>
 
 </div>
 
-</div>
+<button id="finish">
+
+Final Surprise ❤️
+
+</button>
 
 </section>
 
-<section class="endPage">
+<!-- SCENE 5 -->
+
+<section class="scene locked"
+
+id="scene5">
 
 <h1>
 
-Happy Birthday Once Again ❤️
+Thank You ❤️
 
 </h1>
 
 <p>
 
-Hope this little surprise made you smile.
+May every year bring more happiness,
+
+more smiles,
+
+and beautiful memories.
+
+Happy Birthday Rohini.
+
+✨❤️🎂
 
 </p>
 
-<button id="restart">
+<button id="replay">
 
-Replay Surprise 🎉
+Replay 🎉
 
 </button>
 
@@ -200,4 +226,5 @@ Replay Surprise 🎉
 <script src="script.js"></script>
 
 </body>
+
 </html>
