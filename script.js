@@ -1,145 +1,280 @@
-// =========================
-// ELEMENTS
-// =========================
+// =============================
+// SCENES
+// =============================
 
-const startBtn = document.getElementById("startBtn");
-const blowBtn = document.getElementById("blowBtn");
+const scenes = document.querySelectorAll(".scene");
 
-const galleryBtn = document.getElementById("galleryBtn");
+let current = 0;
 
-const restart = document.getElementById("restart");
+function showScene(index){
 
-const flame = document.getElementById("flame");
+scenes.forEach((scene,i)=>{
 
-const giftClosed = document.getElementById("giftClosed");
+scene.classList.remove("active");
 
-const giftOpen = document.getElementById("giftOpen");
+if(i===index){
 
-const cakePage = document.getElementById("cakePage");
-
-const giftPage = document.getElementById("giftPage");
-
-const gallery = document.getElementById("gallery");
-
-// =========================
-// START
-// =========================
-
-startBtn.onclick=()=>{
-
-cakePage.scrollIntoView({
-
-behavior:"smooth"
-
-});
+scene.classList.add("active");
 
 }
 
-// =========================
-// BLOW CANDLE
-// =========================
+});
 
-blowBtn.onclick=()=>{
+current=index;
+
+}
+
+// =============================
+// ELEMENTS
+// =============================
+
+const begin=document.getElementById("begin");
+
+const blow=document.getElementById("blow");
+
+const flame=document.getElementById("flame");
+
+const smoke=document.getElementById("smoke");
+
+const giftClosed=document.getElementById("giftClosed");
+
+const giftOpen=document.getElementById("giftOpen");
+
+const goldLight=document.querySelector(".goldLight");
+
+const letter=document.getElementById("letter");
+
+const typed=document.getElementById("typed");
+
+const continueBtn=document.getElementById("continue");
+
+const finish=document.getElementById("finish");
+
+const replay=document.getElementById("replay");
+
+// =============================
+// BEGIN
+// =============================
+
+begin.onclick=()=>{
+
+showScene(1);
+
+};
+
+// =============================
+// CANDLE
+// =============================
+
+blow.onclick=()=>{
+
+blow.disabled=true;
 
 flame.style.opacity="0";
 
-blowBtn.innerHTML="Wish Made ❤️";
+smoke.style.opacity="1";
+
+let y=0;
+
+let smokeAnim=setInterval(()=>{
+
+y+=4;
+
+smoke.style.transform=
+
+`translate(-50%,-${y}px) scale(${1+y/80})`;
+
+smoke.style.opacity=1-y/90;
+
+if(y>90){
+
+clearInterval(smokeAnim);
+
+}
+
+},20);
 
 createConfetti();
 
 setTimeout(()=>{
 
-giftPage.scrollIntoView({
+showScene(2);
 
-behavior:"smooth"
+},1800);
 
-});
+};
 
-},1200);
+// =============================
+// GIFT
+// =============================
+
+giftClosed.onclick=()=>{
+
+giftClosed.style.pointerEvents="none";
+
+if(navigator.vibrate){
+
+navigator.vibrate([120,60,120,60,250]);
 
 }
 
-// =========================
-// OPEN GIFT
-// =========================
+giftClosed.classList.add("shake");
 
-giftClosed.onclick=()=>{
+goldLight.style.opacity="1";
+
+setTimeout(()=>{
 
 giftClosed.style.display="none";
 
 giftOpen.style.display="block";
 
-createSparkles();
+letter.classList.add("show");
 
-setTimeout(()=>{
-
-document.querySelector(".messagePage")
-
-.scrollIntoView({
-
-behavior:"smooth"
-
-});
+typeLetter();
 
 },1200);
 
+};
+
+// =============================
+// LETTER
+// =============================
+
+const message=
+
+`Happy Birthday Rohini ❤️
+
+May your smile never fade.
+
+May every dream become reality.
+
+Stay happy.
+
+Stay amazing.
+
+You deserve the best.
+
+Happy Birthday 🎂`;
+
+let i=0;
+
+function typeLetter(){
+
+typed.innerHTML="";
+
+i=0;
+
+continueBtn.style.display="none";
+
+let typer=setInterval(()=>{
+
+typed.innerHTML+=message.charAt(i);
+
+i++;
+
+if(i>=message.length){
+
+clearInterval(typer);
+
+continueBtn.style.display="block";
+
 }
 
-// =========================
-// OPEN GALLERY
-// =========================
-
-galleryBtn.onclick=()=>{
-
-gallery.scrollIntoView({
-
-behavior:"smooth"
-
-});
+},35);
 
 }
 
-// =========================
+// =============================
+// CONTINUE
+// =============================
+
+continueBtn.onclick=()=>{
+
+showScene(3);
+
+};
+
+// =============================
+// FINISH
+// =============================
+
+finish.onclick=()=>{
+
+createHearts();
+
+showScene(4);
+
+};
+
+// =============================
 // REPLAY
-// =========================
+// =============================
 
-restart.onclick=()=>{
+replay.onclick=()=>{
 
-window.scrollTo({
+// back to scene one
 
-top:0,
+showScene(0);
 
-behavior:"smooth"
+// flame back
 
-});
+flame.style.opacity="1";
 
-}
+// smoke reset
 
-// =========================
+smoke.style.opacity="0";
+
+smoke.style.transform="translate(-50%,0) scale(1)";
+
+// cake button
+
+blow.disabled=false;
+
+// gift reset
+
+giftClosed.style.display="block";
+
+giftClosed.style.pointerEvents="auto";
+
+giftClosed.classList.remove("shake");
+
+giftOpen.style.display="none";
+
+goldLight.style.opacity="0";
+
+// letter
+
+letter.classList.remove("show");
+
+typed.innerHTML="";
+
+continueBtn.style.display="none";
+
+};
+
+// =============================
 // CONFETTI
-// =========================
+// =============================
 
 function createConfetti(){
 
 for(let i=0;i<120;i++){
 
-let c=document.createElement("div");
+let c=document.createElement("span");
 
 c.className="confetti";
 
 c.style.left=Math.random()*100+"vw";
 
-c.style.animationDelay=
-
-Math.random()*2+"s";
-
 c.style.background=
 
-["gold","#fff","#FFD76A","#ffdd55"][
+["gold","#fff","#FFD86B","#ffeb8a"]
 
-Math.floor(Math.random()*4)
+[Math.floor(Math.random()*4)];
 
-];
+c.style.animationDelay=
+
+Math.random()*1.5+"s";
 
 document.body.appendChild(c);
 
@@ -147,200 +282,40 @@ setTimeout(()=>{
 
 c.remove();
 
-},5000);
+},4500);
 
 }
 
 }
 
-// =========================
-// SPARKLES
-// =========================
+// =============================
+// HEARTS
+// =============================
 
-function createSparkles(){
+function createHearts(){
 
-for(let i=0;i<50;i++){
+for(let i=0;i<40;i++){
 
-let s=document.createElement("div");
+let h=document.createElement("div");
 
-s.className="spark";
+h.className="heart";
 
-s.style.left=
+h.innerHTML="❤️";
 
-(window.innerWidth/2-80+
+h.style.left=Math.random()*100+"vw";
 
-Math.random()*160)+"px";
+h.style.animationDuration=
 
-s.style.top=
+4+Math.random()*3+"s";
 
-(window.scrollY+350+
-
-Math.random()*100)+"px";
-
-document.body.appendChild(s);
+document.body.appendChild(h);
 
 setTimeout(()=>{
 
-s.remove();
+h.remove();
 
-},2500);
-
-}
+},7000);
 
 }
-
-// =========================
-// FLOATING STARS
-// =========================
-
-setInterval(()=>{
-
-let star=document.createElement("div");
-
-star.className="floatingStar";
-
-star.style.left=Math.random()*100+"vw";
-
-star.style.animationDuration=
-
-5+Math.random()*5+"s";
-
-document.body.appendChild(star);
-
-setTimeout(()=>{
-
-star.remove();
-
-},9000);
-
-},400);
-
-// =========================
-// MOON PARALLAX
-// =========================
-
-window.addEventListener("scroll",()=>{
-
-document.querySelector(".moon")
-
-.style.transform=
-
-`translateY(${window.scrollY*.12}px)`;
-
-});
-
-// =========================
-// SHOW MESSAGE
-// =========================
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show","fade");
-
-}
-
-});
-
-},{threshold:.4});
-
-observer.observe(document.querySelector(".messagePage"));
-
-// =========================
-// FLOATING HEARTS
-// =========================
-
-function createHeart(){
-
-const heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.animationDuration=
-
-4+Math.random()*4+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-
-heart.remove();
-
-},8000);
-
-}
-
-setInterval(createHeart,900);
-
-// =========================
-// TYPEWRITER EFFECT
-// =========================
-
-const msg=document.querySelector(".card p");
-
-const fullText=msg.innerHTML;
-
-msg.innerHTML="";
-
-let i=0;
-
-function type(){
-
-if(i<fullText.length){
-
-msg.innerHTML+=fullText.charAt(i);
-
-i++;
-
-setTimeout(type,25);
-
-}
-
-}
-
-setTimeout(type,2500);
-
-// =========================
-// PHOTO CLICK ZOOM
-// =========================
-
-document.querySelectorAll(".photo").forEach(photo=>{
-
-photo.onclick=()=>{
-
-photo.classList.toggle("zoom");
-
-}
-
-});
-
-giftClosed.onclick=()=>{
-
-giftClosed.classList.add("shake");
-
-setTimeout(()=>{
-
-giftClosed.style.display="none";
-
-giftOpen.style.display="block";
-
-createSparkles();
-
-document.querySelector(".messagePage")
-
-.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-},900);
 
 }
