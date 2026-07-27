@@ -321,3 +321,26 @@ photo.classList.toggle("zoom");
 
 });
 
+giftClosed.onclick=()=>{
+
+giftClosed.classList.add("shake");
+
+setTimeout(()=>{
+
+giftClosed.style.display="none";
+
+giftOpen.style.display="block";
+
+createSparkles();
+
+document.querySelector(".messagePage")
+
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+},900);
+
+}
