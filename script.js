@@ -69,7 +69,8 @@
     window.scrollTo(0, 0);
 
 }
-
+   show("landing");
+  
   document.querySelectorAll("[data-next]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var current = btn.closest(".scene").getAttribute("data-scene");
