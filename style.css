@@ -67,7 +67,7 @@ body {
     line-height:1.25;
     padding-left:8px;
 }
-.divider { margin-top: 24px; display: flex; align-items: center; gap: 12px; color: #e8c56a; justify-content: center; }
+.divider { margin-top: 20px; display: flex; align-items: center; gap: 12px; color: #e8c56a; justify-content: center; }
 .divider span { height: 1px; width: 40px; background: linear-gradient(to right, transparent, #e8c56a); }
 .divider span:last-child { background: linear-gradient(to left, transparent, #e8c56a); }
 .divider.small span { width: 32px; }
@@ -230,6 +230,7 @@ body {
     text-align:right;
     margin-top:12px;
     padding-right:20px;
+  margin-left: 100%;
 }
 
 /* Album */
