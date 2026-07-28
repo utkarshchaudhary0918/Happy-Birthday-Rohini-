@@ -906,7 +906,7 @@ filter:blur(0);
     .album{
         margin-top:5px;
         margin-left:12px;
-        transform:scale(1.33);
+        transform:scale(1.01);
     }
 
     .polaroid{
