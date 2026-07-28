@@ -762,10 +762,16 @@ filter:blur(0);
     top:0;
     left:0;
     width:100%;
-    height:140px;
+    height:170px;
+
     object-fit:cover;
+
     opacity:.75;
+    mix-blend-mode:screen;
+
     pointer-events:none;
+
+    z-index:0;
 }
 .album { position: relative; margin-top: 70px; width: 100%; max-width: 22rem; height: 330px; transform: scale(1.12); }
 .polaroid {
