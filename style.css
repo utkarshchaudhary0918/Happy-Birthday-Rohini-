@@ -223,14 +223,15 @@ body {
 .corner { position: absolute; color: rgba(232,197,106,.7); }
 .corner.tl { left: 12px; top: 10px; } .corner.tr { right: 12px; top: 10px; }
 .corner.bl { left: 12px; bottom: 10px; } .corner.br { right: 12px; bottom: 10px; }
-.card-title { text-align: center; font-size: 32px; margin-left: 20px; white-space: nowrap; letter-spacing: 0;}
-.card-sub { text-align: center; font-size: 30px; margin: 4px 0 0; }
+.card-title { text-align: center; font-size: 32px; margin-left: 10px; white-space: nowrap; letter-spacing: 0;}
+.card-sub { text-align: center; font-size: 32px; margin: 4px 0 0; }
 .card-body { margin-top: 16px; font-size: 14px; line-height: 1.6; color: rgba(245,233,201,.9); }
 .signoff{
     text-align:right;
     margin-top:12px;
     padding-right:20px;
   margin-left: 60%;
+  font-size: 15px;
 }
 
 /* Album */
