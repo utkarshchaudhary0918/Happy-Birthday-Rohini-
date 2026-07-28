@@ -900,16 +900,43 @@ filter:blur(0);
 
 /* iPhone Album */
 body.ios .scene[data-scene="album"] .eyebrow{
-    margin-top:42px !important;
+    margin-top:0 !important;
 }
 
 body.ios .scene[data-scene="album"] .section-title{
-    margin-top:14px !important;
-    margin-bottom:18px !important;
+    margin-top:6px !important;
+    margin-bottom:8px !important;
 }
 
 body.ios .album{
-    margin-top:70px !important;
-    margin-left:0 !important;
-    transform:scale(1.05) !important;
+    margin-top:38px !important;
+    margin-left:6px !important;
+    transform:scale(1.10) !important;
+}
+
+body.ios .polaroid{
+    width:116px !important;
+}
+
+body.ios .polaroid img{
+    height:116px !important;
+}
+
+body.android .scene[data-scene="album"]{
+    overflow-y:auto;
+    padding-bottom:120px;
+}
+
+body.android .album{
+    margin-top:5px;
+    margin-left:12px;
+    transform:scale(1.25);
+}
+
+body.android .polaroid{
+    width:122px;
+}
+
+body.android .polaroid img{
+    height:122px;
 }
