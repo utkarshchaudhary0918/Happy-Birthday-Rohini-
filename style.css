@@ -388,18 +388,19 @@ translateY(-35px);
     position:absolute;
 
     left:50%;
-    top:60%;
+    top:72%;
 
-    width:8px;
-    height:8px;
+    width:14px;
+    height:4px;
 
     border-radius:50%;
 
     background:radial-gradient(circle,#fff7d8,#ffd86b,#b8862f);
 
     box-shadow:
-    0 0 8px #ffd86b,
-    0 0 18px #ffd86b;
+0 0 15px #ffd86b,
+0 0 35px #ffd86b,
+0 0 60px rgba(255,215,0,.8);
 
     animation:particleBurst 1s ease-out forwards;
 }
