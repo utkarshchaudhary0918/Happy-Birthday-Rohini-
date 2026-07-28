@@ -898,8 +898,9 @@ filter:blur(0);
 
     /* Slightly taller lights */
     .lights{
-        height:180px;
-        object-position:center top;
-    }
+    height:160px;
+    object-fit:cover;
+    object-position:center -45px;
+}
 
 }
