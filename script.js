@@ -146,11 +146,23 @@ setTimeout(function () {
     giftBtn.classList.add("shake");
     giftHint.textContent = "Shaking…";
     setTimeout(function () {
-      giftBtn.hidden = true;
-      giftOpen.hidden = false;
-      giftOpen.classList.add("reveal");
-      giftHint.textContent = "Opening…";
-      setTimeout(function () { show("card"); }, 1000);
-    }, 800);
-  });
+
+    giftBtn.hidden = true;
+    giftOpen.hidden = false;
+    giftOpen.classList.add("reveal");
+    giftHint.textContent = "Opening…";
+
+    var letter = document.getElementById("letterEnvelope");
+
+    letter.hidden = false;
+
+    setTimeout(function () {
+        letter.classList.add("fly");
+    }, 300);
+
+    setTimeout(function () {
+        show("card");
+    }, 2200);
+
+}, 800);
 })();
