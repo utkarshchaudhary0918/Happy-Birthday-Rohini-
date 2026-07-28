@@ -876,20 +876,14 @@ filter:blur(0);
 
 @media screen and (max-width:430px){
 
-.scene[data-scene="album"] .polaroid{
-    top:calc(var(--top) - 30px);
-}
-
 .scene[data-scene="album"] .eyebrow{
-    margin-top:-18px;
+    margin-bottom:-10px;
 }
 
 .scene[data-scene="album"] .section-title{
-    margin-top:-8px;
-}
-
-.lights{
-    height:160px;
+    margin-top:0;
+    line-height:1;
+    margin-bottom:-30px;
 }
 
 }
