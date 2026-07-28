@@ -896,24 +896,28 @@ filter:blur(0);
 }
 
 /* Android only */
-body.android .scene[data-scene="album"] .eyebrow{
-    margin-top:30px;
-}
+@media (max-width:430px){
 
-body.android .scene[data-scene="album"] .section-title{
-    margin-top:8px;
-}
+    .scene[data-scene="album"]{
+        overflow-y:auto;
+        padding-bottom:120px;
+    }
 
-body.android .album{
-    background:red !important;
-    transform:scale(0.5) !important;
-}
-body.android .scene[data-scene="album"]{
-    overflow-y: auto;
-    padding-bottom: 120px;
-}
+    .scene[data-scene="album"] .eyebrow{
+        margin-top:20px;
+    }
 
-/* iPhone only */
+    .scene[data-scene="album"] .section-title{
+        margin-top:5px;
+    }
+
+    .album{
+        margin-top:15px;
+        margin-left:12px;
+        transform:scale(1.30);
+    }
+
+}
 /* iPhone only */
 @supports (-webkit-touch-callout: none) {
 
