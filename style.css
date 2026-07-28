@@ -15,6 +15,7 @@ body {
     font-family:"Great Vibes", cursive;
     line-height:1.25;
     display:inline-block;
+  padding: 0.15em;
 }
 .italic { font-style: italic; }
 .muted { color: rgba(245,233,201,.8); }
