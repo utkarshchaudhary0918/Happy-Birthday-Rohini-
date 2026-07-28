@@ -757,7 +757,7 @@ filter:blur(0);
 }
 
 /* Album */
-.lights { position: absolute; inset: 0 0 auto 0; height: 160px; width: 100%; object-fit: cover; opacity: .7; mix-blend-mode: screen; pointer-events: none; object-position: center top;}
+.lights { position: absolute; inset: 0 0 auto 0; height: 220px; width: 100%; object-fit: cover; opacity: .7; mix-blend-mode: screen; pointer-events: none; object-position: center top;}
 .album { position: relative; margin-top: -10px; width: 100%; max-width: 22rem; height: 330px; }
 .polaroid {
   position: absolute; width: 112px; top: var(--top); left: var(--left);
@@ -874,46 +874,23 @@ filter:blur(0);
     opacity:1;
 }
 
-/* ---------- iPhone ---------- */
-@media screen and (max-width:430px) and (-webkit-touch-callout:none){
+
+@media screen and (max-width:430px){
 
     .scene[data-scene="album"] .eyebrow{
-        margin-top:-18px;
+        margin-top:-26px;
     }
 
     .scene[data-scene="album"] .section-title{
-        margin-top:-8px;
+        margin-top:-16px;
     }
 
-    /* Photos back down */
-    .album{
-        margin-top:-10px;
-    }
-}
-
-/* ---------- Android ---------- */
-@media screen and (max-width:430px) and (not (-webkit-touch-callout:none)){
-
-    /* Move heading up */
-    .scene[data-scene="album"] .eyebrow{
-        margin-top:-28px;
-    }
-
-    .scene[data-scene="album"] .section-title{
-        margin-top:-18px;
-    }
-
-    /* Leave photos where they are */
-    .album{
-        margin-top:-35px;
-    }
-
-    /* Move text and button down slightly */
     .scene[data-scene="album"] .sm{
         margin-top:18px;
     }
 
     .scene[data-scene="album"] .mt-sm{
-        margin-top:24px;
+        margin-top:22px;
     }
+
 }
