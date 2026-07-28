@@ -930,9 +930,12 @@ body.android .scene[data-scene="album"]{
 }
 
 body.android .album{
-    margin-top:42px;
-    margin-left:0;
-    transform:scale(.93);
+
+    margin-top:58px;
+
+    margin-left:6px;
+
+    transform:scale(.95);
 }
 
 body.android .polaroid{
@@ -943,10 +946,15 @@ body.android .polaroid img{
     height:98px;
 }
 
+
+
 body.android .scene[data-scene="album"] .sm{
-    margin-top:65px;
+
+    margin-top:95px;
+
 }
 
 body.android .scene[data-scene="album"] .mt-sm{
-    margin-top:38px;
+
+    margin-top:16px;
 }
