@@ -233,7 +233,11 @@ setTimeout(function () {
 }, 800);
 });
 })();
-alert("JS is running");
+if (/Android/i.test(navigator.userAgent)) {
+    document.body.classList.add("android");
+}
+
+alert(navigator.userAgent);
 
 alert(document.body.className);
 
