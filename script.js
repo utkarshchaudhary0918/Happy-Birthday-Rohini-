@@ -81,6 +81,10 @@
     wishGranted.hidden = false;
 
 wishGranted.hidden = false;
+
+requestAnimationFrame(function () {
+    wishGranted.style.opacity = "1";
+});
     setTimeout(function () { show("gift"); }, 2200);
   }
   tapBtn.addEventListener("click", blowOutCandle);
