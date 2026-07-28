@@ -139,8 +139,36 @@ var magicText = document.getElementById("magicText");
   var giftClosed = document.getElementById("giftClosed");
   var giftOpen = document.getElementById("giftOpen");
   var giftHint = document.getElementById("giftHint");
+  var particles = document.getElementById("magicParticles");
   var shaking = false;
 
+  function burstParticles(){
+
+    for(var i=0;i<28;i++){
+
+        var p=document.createElement("span");
+
+        p.className="magicParticle";
+
+        var x=(Math.random()*240)-120;
+        var y=-(Math.random()*220)-40;
+
+        p.style.setProperty("--x",x+"px");
+        p.style.setProperty("--y",y+"px");
+
+        p.style.animationDelay=(Math.random()*0.08)+"s";
+
+        particles.appendChild(p);
+
+        (function(el){
+            setTimeout(function(){
+                el.remove();
+            },1000);
+        })(p);
+
+    }
+
+}
   giftBtn.addEventListener("click", function () {
     if (shaking) return;
     shaking = true;
@@ -154,10 +182,12 @@ if (navigator.vibrate) {
     setTimeout(function () {
     magicGlow.classList.add("show");
 magicText.classList.add("show");
+      burstParticles();
     giftBtn.hidden = true;
     giftOpen.hidden = false;
     giftOpen.classList.add("reveal");
     giftHint.textContent = "Opening…";
+      
 
     var letter = document.getElementById("letterEnvelope");
 var flash = document.getElementById("flash");
