@@ -133,6 +133,8 @@ setTimeout(function () {
   });
 
   /* ---------- Gift scene ---------- */
+  var magicGlow = document.getElementById("magicGlow");
+var magicText = document.getElementById("magicText");
   var giftBtn = document.getElementById("giftBtn");
   var giftClosed = document.getElementById("giftClosed");
   var giftOpen = document.getElementById("giftOpen");
@@ -143,10 +145,11 @@ setTimeout(function () {
     if (shaking) return;
     shaking = true;
     giftBtn.classList.remove("drift");
-    giftBtn.classList.add("shake");
+    giftBtn.classList.add("magicShake");
     giftHint.textContent = "Shaking…";
     setTimeout(function () {
-
+    magicGlow.classList.add("show");
+magicText.classList.add("show");
     giftBtn.hidden = true;
     giftOpen.hidden = false;
     giftOpen.classList.add("reveal");
