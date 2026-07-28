@@ -37,6 +37,11 @@ const flame=document.getElementById("flame");
 const smoke=document.getElementById("smoke");
 
 const giftClosed=document.getElementById("giftClosed");
+console.log(giftClosed);
+
+giftClosed.onclick = function () {
+    alert("Gift clicked!");
+};
 
 const giftOpen=document.getElementById("giftOpen");
 
