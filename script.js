@@ -92,6 +92,7 @@ setTimeout(function () {
 setTimeout(function () {
     show("gift");
 }, 3000);
+  }
   tapBtn.addEventListener("click", blowOutCandle);
 
   micBtn.addEventListener("click", function () {
