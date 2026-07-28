@@ -878,19 +878,16 @@ filter:blur(0);
 @media screen and (max-width:430px){
 
     .scene[data-scene="album"] .eyebrow{
-        margin-top:-26px;
+        margin-top:-42px;
     }
 
     .scene[data-scene="album"] .section-title{
-        margin-top:-16px;
+        margin-top:-30px;
     }
 
-    .scene[data-scene="album"] .sm{
-        margin-top:18px;
-    }
-
-    .scene[data-scene="album"] .mt-sm{
-        margin-top:22px;
+    .album{
+        transform:scale(1.12);
+        margin-top:8px;
     }
 
 }
