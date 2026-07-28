@@ -893,7 +893,7 @@ filter:blur(0);
 @media screen and (max-width:430px){
 
     .scene[data-scene="album"]{
-        padding-top:120px;
+        padding-top:0px;
     }
 
     .scene[data-scene="album"] .eyebrow{
