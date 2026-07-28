@@ -104,15 +104,9 @@ setTimeout(function () {
 
     var giftScene = document.querySelector('[data-scene="gift"]');
 
-    giftScene.style.opacity = "0";
-    giftScene.style.transform = "translateY(25px)";
-
-    requestAnimationFrame(function () {
-        giftScene.style.transition = "opacity .8s ease, transform .8s ease";
-        giftScene.style.opacity = "1";
-        giftScene.style.transform = "translateY(0)";
-    });
-
+    setTimeout(function () {
+    document.querySelector('[data-scene="cake"]').classList.remove("blur");
+    show("gift");
 }, 4000);
   }
   tapBtn.addEventListener("click", blowOutCandle);
