@@ -1,230 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+<!doctype html>
+      <div class="polaroid" style="--r:-6deg;--top:0%;--left:6%"><div class="tape"></div><img src="photo1.jpg" alt="" /></div>
+      <div class="polaroid" style="--r:5deg;--top:4%;--left:54%"><div class="tape"></div><img src="photo2.jpg" alt="" /></div>
+      <div class="polaroid" style="--r:-3deg;--top:45%;--left:2%"><div class="tape"></div><img src="photo3.jpg" alt="" /></div>
+      <div class="polaroid" style="--r:7deg;--top:50%;--left:50%"><div class="tape"></div><img src="photo4.jpg" alt="" /></div>
+      <div class="flourish">❦</div>
+    </div>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday Rohini ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<div class="sky"></div>
-
-<div class="stars"></div>
-
-<div class="goldGlow"></div>
-
-<img src="assets/moon.png" class="moon">
-
-<!-- SCENE 1 -->
-
-<section class="scene active" id="scene1">
-
-<div class="hero">
-
-<h4>✨ A Special Night ✨</h4>
-
-<h1>Happy Birthday</h1>
-
-<h2>Rohini ❤️</h2>
-
-<p>
-
-Tonight is about celebrating you.
-
-Every click unlocks another surprise.
-
-</p>
-
-<button id="begin">
-
-Begin Surprise ✨
-
-</button>
-
-</div>
-
+    <p class="italic muted sm">Every moment with you is one I treasure.</p>
+    <div class="mt-sm"><button class="gold-btn" data-next>Continue ✧</button></div>
+  </div>
 </section>
 
-<!-- SCENE 2 -->
-
-<section class="scene locked" id="scene2">
-
-<h2>Make A Wish ❤️</h2>
-
-<p>
-
-Close your eyes...
-
-Then blow the candle.
-
-</p>
-
-<div class="cakeWrap">
-
-<img src="assets/cake.png"
-
-class="cake">
-
-<div class="flame"
-
-id="flame"></div>
-
-<div class="smoke"
-
-id="smoke"></div>
-
-</div>
-
-<button id="blow">
-
-Blow Candle 🎂
-
-</button>
-
+<!-- 6. Message -->
+<section class="scene" data-scene="message" hidden>
+  <div class="stack center">
+    <p class="eyebrow">You Deserve</p>
+    <h2 class="script gold-gradient section-title">All the happiness</h2>
+    <div class="big-heart">♡</div>
+    <p class="lede">Have a wonderful day and a fantastic year ahead. Keep smiling always.</p>
+    <p class="script gold-gradient section-title">Happy Birthday Rohini ✨</p>
+    <div class="mt-md"><button class="gold-btn" data-next>Continue ✧</button></div>
+  </div>
 </section>
 
-<!-- SCENE 3 -->
-
-<section class="scene locked"
-
-id="scene3">
-
-<h2>Your Gift ❤️</h2>
-
-<p>
-
-Tap the gift.
-
-</p>
-
-<div class="giftContainer">
-
-<div class="goldLight"></div>
-
-<img src="assets/giftbox.png"
-
-id="giftClosed">
-
-<img src="assets/giftopen.png"
-
-id="giftOpen">
-
-<div class="letter"
-
-id="letter">
-
-<div class="paper">
-
-<h3>Dear Rohini ❤️</h3>
-
-<p id="typed"></p>
-
-<button id="continue">
-
-Continue ❤️
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SCENE 4 -->
-
-<section class="scene locked"
-
-id="scene4">
-
-<h2>Some Beautiful Memories ❤️</h2>
-
-<div class="polaroids">
-
-<div class="photo p1">
-
-<img src="assets/photos/1.jpg">
-
-</div>
-
-<div class="photo p2">
-
-<img src="assets/photos/2.jpg">
-
-</div>
-
-<div class="photo p3">
-
-<img src="assets/photos/3.jpg">
-
-</div>
-
-<div class="photo p4">
-
-<img src="assets/photos/4.jpg">
-
-</div>
-
-</div>
-
-<button id="finish">
-
-Final Surprise ❤️
-
-</button>
-
-</section>
-
-<!-- SCENE 5 -->
-
-<section class="scene locked"
-
-id="scene5">
-
-<h1>
-
-Thank You ❤️
-
-</h1>
-
-<p>
-
-May every year bring more happiness,
-
-more smiles,
-
-and beautiful memories.
-
-Happy Birthday Rohini.
-
-✨❤️🎂
-
-</p>
-
-<button id="replay">
-
-Replay 🎉
-
-</button>
-
+<!-- 7. Thanks -->
+<section class="scene" data-scene="thanks" hidden>
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+  <div class="stack center">
+    <h2 class="script gold-gradient thanks-title">Thank You!</h2>
+    <div class="thanks-heart">♡</div>
+    <p class="lede">For being a part of my life.<br />You mean the world to me.</p>
+    <div class="made-with">Made with ♡</div>
+    <button class="restart" id="restart">↺ Watch again</button>
+  </div>
 </section>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
