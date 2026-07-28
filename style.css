@@ -877,8 +877,10 @@ filter:blur(0);
 @media screen and (max-width:430px){
 
 .scene[data-scene="album"]{
-    padding-top:0;
-}
+
+    justify-content:flex-start;
+
+    padding-top:80px;
 
 .scene[data-scene="album"] .stack{
     transform:translateY(-32px);
