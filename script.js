@@ -136,7 +136,7 @@ requestAnimationFrame(function () {
       giftOpen.hidden = false;
       giftOpen.classList.add("reveal");
       giftHint.textContent = "Opening…";
-      setTimeout(function () { show("card"); }, 2000);
+      setTimeout(function () { show("card"); }, 1800);
     }, 800);
   });
 })();
