@@ -900,7 +900,7 @@ filter:blur(0);
 
     .scene[data-scene="album"]{
         overflow-y:auto;
-        padding-bottom:120px;
+        padding-bottom:60px;
     }
 
     .album{
