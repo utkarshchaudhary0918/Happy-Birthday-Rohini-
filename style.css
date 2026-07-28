@@ -757,7 +757,7 @@ filter:blur(0);
 }
 
 /* Album */
-.lights { position: absolute; inset: 0 0 auto 0; height: 180px; width: 100%; object-fit: cover; opacity: .7; mix-blend-mode: screen; pointer-events: none; object-position: center top;}
+.lights { position: absolute; inset: 0 0 auto 0; height: 160px; width: 100%; object-fit: cover; opacity: .7; mix-blend-mode: screen; pointer-events: none; object-position: center top;}
 .album { position: relative; margin-top: -10px; width: 100%; max-width: 22rem; height: 330px; }
 .polaroid {
   position: absolute; width: 112px; top: var(--top); left: var(--left);
