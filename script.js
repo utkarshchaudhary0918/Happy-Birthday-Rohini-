@@ -161,18 +161,14 @@ setTimeout(function () {
     letter.classList.add("fly");
 },300);
 
-setTimeout(function(){
+setTimeout(function () {
+    flash.classList.add("show");
+},1450);
 
-flash.classList.add("show");
-
-},1800);
-
-setTimeout(function(){
-
-flash.classList.remove("show");
-show("card");
-
-},2050);
+setTimeout(function () {
+    flash.classList.remove("show");
+    show("card");
+},1600);
 
 }, 800);
 });
