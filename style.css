@@ -28,15 +28,27 @@ body {
 }
 
 /* Scene layout */
-.scene {
-  position: relative;
-  height: 100dvh;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 20px;
+.scene{
+    position:relative;
+    height:100dvh;
+    overflow:hidden;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 20px;
+
+    opacity:0;
+    transform:translateY(20px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.scene.active{
+    opacity:1;
+    transform:translateY(0);
 }
 
 
