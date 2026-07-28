@@ -905,13 +905,13 @@ body.android .scene[data-scene="album"] .section-title{
 }
 
 body.android .album{
-    transform: scale(1.34);
-    margin-top: 5px;
-    margin-left: 16px;
+    transform: scale(1.26);
+    margin-top: -10px;
+    margin-left: 12px;
 }
 body.android .scene[data-scene="album"]{
     overflow-y: auto;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
 }
 
 /* iPhone only */
