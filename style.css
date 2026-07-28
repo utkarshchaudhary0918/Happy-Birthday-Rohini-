@@ -181,7 +181,7 @@ drop-shadow(0 0 40px rgba(255,220,120,.25));
   75% { transform: translateX(-50%) scaleY(1.05) scaleX(.98); opacity: .95 }
 }
 .smoke {
-  position: absolute; left: 50%; top: 18%; transform: translateX(-50%);
+  position: absolute; left: 50%; top: 5%; transform: translateX(-50%);
   color: rgba(245,233,201,.5); font-size: 30px; opacity: 0; z-index: 3;
 }
 .cake-stage.blown .smoke { animation: smokeRise 2s ease forwards; }
@@ -816,7 +816,7 @@ filter:blur(0);
 @media (max-height:700px){
 
 .album{
-    margin-top:-15px;
+    margin-top:-30px;
 }
 
 }
@@ -878,4 +878,16 @@ filter:blur(0);
 
 #flash.show{
     opacity:1;
+}
+
+@media (max-height:700px){
+
+    .eyebrow{
+        margin-top:-12px;
+    }
+
+    .section-title{
+        margin-top:0;
+    }
+
 }
