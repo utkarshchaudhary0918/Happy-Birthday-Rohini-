@@ -102,11 +102,6 @@ setTimeout(function () {
 
     show("gift");
 
-    var giftScene = document.querySelector('[data-scene="gift"]');
-
-    setTimeout(function () {
-    document.querySelector('[data-scene="cake"]').classList.remove("blur");
-    show("gift");
 }, 4000);
   }
   tapBtn.addEventListener("click", blowOutCandle);
