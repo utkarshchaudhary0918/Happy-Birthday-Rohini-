@@ -873,7 +873,9 @@ filter:blur(0);
 #flash.show{
     opacity:1;
 }
-
+.lights{
+    display:none !important;
+}
 
 @media screen and (max-width:430px){
 
