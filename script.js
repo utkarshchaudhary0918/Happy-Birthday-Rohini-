@@ -153,16 +153,22 @@ setTimeout(function () {
     giftHint.textContent = "Opening…";
 
     var letter = document.getElementById("letterEnvelope");
+var flash = document.getElementById("flash");
 
-    letter.hidden = false;
+letter.hidden = false;
 
-    setTimeout(function () {
-        letter.classList.add("fly");
-    }, 300);
+setTimeout(function () {
+    letter.classList.add("fly");
+},300);
 
-    setTimeout(function () {
-        show("card");
-    }, 2200);
+setTimeout(function () {
+    flash.classList.add("show");
+},2350);
+
+setTimeout(function () {
+    flash.classList.remove("show");
+    show("card");
+},2500);
 
 }, 800);
 });
