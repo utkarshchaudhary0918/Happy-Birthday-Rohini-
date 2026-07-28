@@ -902,12 +902,9 @@ body.android .album{
 /* iPhone only */
 @supports (-webkit-touch-callout: none) {
 
-  .scene[data-scene="album"] .eyebrow{
-      margin-top:30px;
-  }
-
-  .scene[data-scene="album"] .section-title{
-      margin-top:10px;
-  }
+    .scene[data-scene="album"]{
+        align-items:flex-start;
+        padding-top:55px;
+    }
 
 }
