@@ -930,31 +930,31 @@ body.android .scene[data-scene="album"]{
 }
 
 body.android .album{
+    height:390px !important;
+    margin-top:58px !important;
 
-    margin-top:58px;
+    margin-left:6px !important;
 
-    margin-left:6px;
-
-    transform:scale(.95);
+    transform:scale(1.02) !important;
 }
 
 body.android .polaroid{
-    width:98px;
+    width:110px !important;
 }
 
 body.android .polaroid img{
-    height:98px;
+    height:110px !important;
 }
 
 
 
 body.android .scene[data-scene="album"] .sm{
 
-    margin-top:95px;
+    margin-top:8px !important;
 
 }
 
 body.android .scene[data-scene="album"] .mt-sm{
 
-    margin-top:16px;
+    margin-top:16px !important;
 }
