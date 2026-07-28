@@ -905,9 +905,8 @@ body.android .scene[data-scene="album"] .section-title{
 }
 
 body.android .album{
-    transform: scale(1.26);
-    margin-top: -10px;
-    margin-left: 12px;
+    background:red !important;
+    transform:scale(0.5) !important;
 }
 body.android .scene[data-scene="album"]{
     overflow-y: auto;
