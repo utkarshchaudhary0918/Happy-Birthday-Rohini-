@@ -884,4 +884,15 @@ filter:blur(0);
     opacity:1;
 }
 
+body.android .album{
+    transform: scale(1.28);
+    margin-top:55px;
+}
 
+body.android .scene[data-scene="album"] .eyebrow{
+    margin-top:10px;
+}
+
+body.android .scene[data-scene="album"] .section-title{
+    margin-top:4px;
+}
