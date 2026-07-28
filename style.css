@@ -928,11 +928,12 @@ body.android .scene[data-scene="album"]{
 }
 
 body.android .album{
-    margin-top:75px;
+
+    margin-top:55px;     /* was 75px */
+
     margin-left:8px;
-    height:390px;      /* was 330px */
-    transform:scale(1.02);
-}
+
+    transform:scale(1.05);
 
 body.android .scene[data-scene="album"] .sm{
     margin-top:30px;
@@ -942,26 +943,12 @@ body.android .scene[data-scene="album"] .mt-sm{
     margin-top:28px;
 }
 
-body.android .polaroid:nth-child(1){
-    top:-6% !important;
-}
 
-body.android .polaroid:nth-child(2){
-    top:-2% !important;
-}
-
-body.android .polaroid:nth-child(3){
-    top:34% !important;
-}
-
-body.android .polaroid:nth-child(4){
-    top:38% !important;
-}
 
 body.android .polaroid{
-    width:108px !important;
+    width:104px !important;
 }
 
 body.android .polaroid img{
-    height:108px !important;
+    height:104px !important;
 }
