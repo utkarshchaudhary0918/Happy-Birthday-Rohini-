@@ -233,6 +233,145 @@ drop-shadow(0 0 40px rgba(255,220,120,.25));
 .gift-open.reveal { animation: giftReveal .9s ease-out; }
 @keyframes giftReveal { from { opacity: 0; transform: scale(.85) translateY(10px) } to { opacity: 1; transform: scale(1.08) translateY(-6px) } }
 
+@keyframes magicShake{
+
+0%,100%{
+transform:translateY(0) rotate(0);
+}
+
+15%{
+transform:translate(-6px,-3px) rotate(-3deg);
+}
+
+30%{
+transform:translate(7px,3px) rotate(3deg);
+}
+
+45%{
+transform:translate(-8px,-4px) rotate(-4deg);
+}
+
+60%{
+transform:translate(8px,4px) rotate(4deg);
+}
+
+75%{
+transform:translate(-5px,-2px) rotate(-2deg);
+}
+}
+
+.magicShake{
+animation:magicShake .7s ease-in-out;
+}
+#magicGlow{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:40px;
+height:40px;
+
+border-radius:50%;
+
+background:#ffd86b;
+
+filter:blur(20px);
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:15;
+}
+
+#magicGlow.show{
+
+animation:magicGlow .8s ease forwards;
+
+}
+
+@keyframes magicGlow{
+
+0%{
+opacity:0;
+transform:translate(-50%,-50%) scale(.2);
+}
+
+50%{
+opacity:1;
+transform:translate(-50%,-50%) scale(4);
+}
+
+100%{
+opacity:0;
+transform:translate(-50%,-50%) scale(8);
+}
+
+}
+
+#magicText{
+
+position:absolute;
+
+left:50%;
+
+top:10%;
+
+transform:translateX(-50%);
+
+font-size:24px;
+
+opacity:0;
+
+color:#f7e8b5;
+
+text-shadow:0 0 20px gold;
+
+pointer-events:none;
+
+z-index:20;
+
+}
+
+#magicText.show{
+
+animation:magicText .9s ease forwards;
+
+}
+
+@keyframes magicText{
+
+0%{
+
+opacity:0;
+
+transform:
+translateX(-50%)
+translateY(25px);
+
+}
+
+40%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateX(-50%)
+translateY(-35px);
+
+}
+
+}
 
 /* ---------- Luxury Envelope ---------- */
 
