@@ -924,7 +924,7 @@ body.ios .polaroid img{
 
 body.android .scene[data-scene="album"]{
     overflow-y:auto;
-    padding-bottom:150px;
+    padding-bottom:180px;
 }
 
 body.android .album{
