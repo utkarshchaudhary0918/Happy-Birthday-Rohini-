@@ -57,7 +57,7 @@ body {
   color: #f5e9c9;
 }
 .hero-name{
-    margin-top:12px;
+    margin-top:8px;
     font-size:64px;
     line-height:1.25;
     padding-left:10px;
@@ -68,11 +68,11 @@ body {
     line-height:1.25;
     padding-left:8px;
 }
-.divider { margin-top: 15px; display: flex; align-items: center; gap: 12px; color: #e8c56a; justify-content: center; }
+.divider { margin-top: 8px; display: flex; align-items: center; gap: 12px; color: #e8c56a; justify-content: center; }
 .divider span { height: 1px; width: 40px; background: linear-gradient(to right, transparent, #e8c56a); }
 .divider span:last-child { background: linear-gradient(to left, transparent, #e8c56a); }
 .divider.small span { width: 32px; }
-.lede { margin-top: 24px; max-width: 20rem; font-size: 17px; line-height: 1.55; color: rgba(245,233,201,.9); }
+.lede { margin-top: 8px; max-width: 20rem; font-size: 17px; line-height: 1.55; color: rgba(245,233,201,.9); }
 .down-arrow { margin-top: 40px; color: rgba(245,233,201,.6); animation: bob 2s infinite ease-in-out; }
 @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
 
@@ -88,6 +88,8 @@ body {
   background: transparent;
   border: 1px solid rgba(232,197,106,.6);
   color: #e8c56a;
+  width: 90%;
+  max-width: 340px;
   padding: 12px 28px;
   border-radius: 999px;
   letter-spacing: .25em;
@@ -110,8 +112,8 @@ body {
 
 /* Moon */
 .moon {
-  position: absolute; right: 12px; top: 16px;
-  width: 140px; height: 140px; opacity: .7; mix-blend-mode: screen;
+  position: absolute; right: 24px; top: 28px;
+  width: 110px; height: 110px; opacity: .7; mix-blend-mode: screen;
   animation: moonFloat 8s ease-in-out infinite;
   pointer-events: none;
   filter:
@@ -126,7 +128,7 @@ body {
 }
 
 /* Cake */
-.cake-stage { position: relative; margin-top: 24px; width: 100%; height: 340px; display: flex; align-items: flex-end; justify-content: center; }
+.cake-stage { position: relative; margin-top: 8px; width: 100%; height: 290px; display: flex; align-items: flex-end; justify-content: center; }
 .cake-glow {
   position: absolute; left: 50%; top: 16px; transform: translateX(-50%);
   width: 220px; height: 220px; border-radius: 50%;
@@ -137,7 +139,7 @@ body {
 .cake-stage.blown .cake-glow { animation: none; opacity: 0; transition: opacity .4s; }
 @keyframes pulseGlow { 0%,100% { opacity: .5 } 50% { opacity: .9 } }
 .cake-img { position: relative; z-index: 1; height: 280px; width: auto; object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); }
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); transform: translateY(-10px); }
 .flame {
   position: absolute; left: 50%; top: 18%; transform: translateX(-50%);
   z-index: 2; height: 32px; width: 12px;
