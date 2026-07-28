@@ -233,8 +233,12 @@ setTimeout(function () {
 }, 800);
 });
 })();
-if (/Android/i.test(navigator.userAgent)) {
+const ua = navigator.userAgent;
+
+if (/Android/i.test(ua)) {
     document.body.classList.add("android");
+} else if (/iPhone|iPad|iPod/i.test(ua)) {
+    document.body.classList.add("ios");
 }
 
 alert(navigator.userAgent);
