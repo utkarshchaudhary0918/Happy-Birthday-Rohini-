@@ -771,10 +771,10 @@ filter:blur(0);
   animation: polaroidIn .2s cubic-bezier(.22,.1,.36,1) forwards;
   transition: transform .3s;
 }
-.polaroid:nth-child(1) { animation-delay: .3s }
-.polaroid:nth-child(2) { animation-delay: .55s }
-.polaroid:nth-child(3) { animation-delay: .8s }
-.polaroid:nth-child(4) { animation-delay: 1.05s }
+.polaroid:nth-child(1) { animation-delay: .5s }
+.polaroid:nth-child(2) { animation-delay: 1.0s }
+.polaroid:nth-child(3) { animation-delay: 1.5s }
+.polaroid:nth-child(4) { animation-delay: 2.0s }
 .polaroid:hover { transform: rotate(0) scale(1.05); z-index: 3; }
 .polaroid > img { display: block; width: 100%; height: 112px; object-fit: cover; }
 .polaroid { background: #f8ecd0; padding: 8px 8px 22px; box-shadow: 0 15px 35px rgba(0,0,0,.7); filter: sepia(.05); border-radius: 2px; }
