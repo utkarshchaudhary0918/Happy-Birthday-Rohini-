@@ -767,7 +767,7 @@ filter:blur(0);
     opacity:.75;
     pointer-events:none;
 }
-.album { position: relative; margin-top: -10px; width: 100%; max-width: 22rem; height: 330px; }
+.album { position: relative; margin-top: 70px; width: 100%; max-width: 22rem; height: 330px; transform: scale(1.12); }
 .polaroid {
   position: absolute; width: 112px; top: var(--top); left: var(--left);
   transform:
@@ -887,12 +887,12 @@ filter:blur(0);
 @media screen and (max-width:430px){
 
     .scene[data-scene="album"] .eyebrow{
-        margin-top:-42px;
-    }
+    margin-top:-55px;
+}
 
-    .scene[data-scene="album"] .section-title{
-        margin-top:-30px;
-    }
+.scene[data-scene="album"] .section-title{
+    margin-top:-40px;
+}
 
     .album{
         transform:scale(1.12);
