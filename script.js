@@ -165,13 +165,13 @@ setTimeout(function () {
     flash.classList.add("show");
 },1450);
 
-flash.classList.remove("show");
+setTimeout(function () {
+    flash.classList.remove("show");
+},1600);
 
-setTimeout(function(){
-
+setTimeout(function () {
     show("card");
-
-},150);
+},1650);
 
 }, 800);
 });
