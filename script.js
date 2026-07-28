@@ -1,7 +1,6 @@
 (function () {
   "use strict";
 
-  /* ---------- Sparkles ---------- */
   var sparkles = document.getElementById("sparkles");
   for (var i = 0; i < 40; i++) {
     var s = document.createElement("span");
