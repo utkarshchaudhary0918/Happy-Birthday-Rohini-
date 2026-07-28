@@ -885,21 +885,3 @@ filter:blur(0);
 }
 
 
-@media screen and (max-width:430px){
-
-    /* Move heading slightly DOWN */
-    .scene[data-scene="album"] .eyebrow{
-        margin-top:10px;
-    }
-
-    .scene[data-scene="album"] .section-title{
-        margin-top:4px;
-    }
-
-    /* Bigger photos on Android */
-    .album{
-        transform:scale(1.28);
-        margin-top:55px;
-    }
-
-}
