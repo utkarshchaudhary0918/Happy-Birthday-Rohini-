@@ -1004,3 +1004,11 @@ font-size:16px;
 }
 
 }
+
+#giftClosed{
+outline:3px solid red;
+}
+
+.giftContainer{
+outline:2px solid lime;
+}
