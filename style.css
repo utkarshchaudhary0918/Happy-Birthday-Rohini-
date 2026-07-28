@@ -899,47 +899,46 @@ filter:blur(0);
 @media (max-width:430px) and (hover:none) and (pointer:coarse){
 
     .scene[data-scene="album"]{
+
         overflow-y:auto;
-        padding-bottom:60px;
+
+        padding-bottom:120px;
+
     }
 
     .album{
+
         margin-top:5px;
+
         margin-left:12px;
-        transform:scale(1.01);
+
+        transform:scale(1.33);
+
     }
 
     .polaroid{
-        width:10px;
+
+        width:128px;
+
     }
 
     .polaroid > img{
-        height:60px;
+
+        height:128px;
     }
 
 }
 /* iPhone only */
-@supports (-webkit-touch-callout: none) {
 
-    body:not(.android) .scene[data-scene="album"] .eyebrow{
-        margin-top: 28px !important;
-    }
 
-    body:not(.android) .scene[data-scene="album"] .section-title{
-        margin-top: 14px !important;
-        margin-bottom: 10px !important;
-    }
+body.android .album{
+    margin-top:18px;
+    margin-left:6px;
+    transform:scale(1.20);
+}
 
-    body:not(.android) .scene[data-scene="album"] .album{
-        margin-top: 55px !important;
-        transform: scale(1.12) !important;
-    }
-  body:not(.android) .album{
-
-        margin-top:45px;
-
-        margin-left:10px;
-
-    }
-
+body.ios .album{
+    margin-top:42px;
+    margin-left:10px;
+    transform:scale(1.10);
 }
