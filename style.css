@@ -167,8 +167,18 @@ body {
   color: rgba(245,233,201,.5); font-size: 30px; opacity: 0; z-index: 3;
 }
 .cake-stage.blown .smoke { animation: smokeRise 2s ease forwards; }
-@keyframes smokeRise { 0% { opacity: 0; transform: translate(-50%,0) } 40% { opacity: .7 } 100% { opacity: 0; transform: translate(-50%,-80px) } }
+@keyframes smokeRise { 0% { opacity: 0; transform: translate(-50%,0) } 40% { opacity: .7 } 100% { opacity: 0; transform: translate(-50%,-
+.cake-stage.blown .cake-img{
+    filter: blur(8px);
+    opacity: .35;
+    transform: scale(.95);
+    transition: .5s;
+}
 
+.cake-stage.blown .smoke{
+    filter: blur(3px);
+}
+  
 /* Gift */
 .gift-stage { position: relative; margin-top: 32px; width: 100%; height: 320px; display: flex; align-items: center; justify-content: center; }
 .gift-glow {
