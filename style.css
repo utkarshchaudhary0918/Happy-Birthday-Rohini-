@@ -874,28 +874,46 @@ filter:blur(0);
     opacity:1;
 }
 
-@media screen and (max-width:430px){
+/* ---------- iPhone ---------- */
+@media screen and (max-width:430px) and (-webkit-touch-callout:none){
 
-.scene[data-scene="album"] .eyebrow{
-    margin-bottom:-10px;
-}
-
-.scene[data-scene="album"] .section-title{
-    margin-top:0;
-    line-height:1;
-    margin-bottom:-40px;
-}
-.scene[data-scene="album"] .script{
-
-    padding:0;
-  
-}
-  .scene[data-scene="album"] .lights{
-
-        top:-20px;
-
-        height:160px;
-
+    .scene[data-scene="album"] .eyebrow{
+        margin-top:-18px;
     }
 
+    .scene[data-scene="album"] .section-title{
+        margin-top:-8px;
+    }
+
+    /* Photos back down */
+    .album{
+        margin-top:-10px;
+    }
+}
+
+/* ---------- Android ---------- */
+@media screen and (max-width:430px) and (not (-webkit-touch-callout:none)){
+
+    /* Move heading up */
+    .scene[data-scene="album"] .eyebrow{
+        margin-top:-28px;
+    }
+
+    .scene[data-scene="album"] .section-title{
+        margin-top:-18px;
+    }
+
+    /* Leave photos where they are */
+    .album{
+        margin-top:-35px;
+    }
+
+    /* Move text and button down slightly */
+    .scene[data-scene="album"] .sm{
+        margin-top:18px;
+    }
+
+    .scene[data-scene="album"] .mt-sm{
+        margin-top:24px;
+    }
 }
