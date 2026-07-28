@@ -1,7 +1,7 @@
 // =============================
 // SCENES
 // =============================
-
+alert("JS Loaded");
 const scenes = document.querySelectorAll(".scene");
 
 let current = 0;
