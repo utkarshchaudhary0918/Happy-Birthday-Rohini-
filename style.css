@@ -182,42 +182,41 @@ SCENES
 ========================== */
 
 .scene{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:30px;
 
-position:absolute;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;   /* IMPORTANT */
 
-inset:0;
+    transform:scale(.96);
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-padding:30px;
-
-opacity:0;
-
-visibility:hidden;
-
-transform:scale(.96);
-
-transition:
-
-opacity .8s,
-transform .8s;
-
+    transition:
+    opacity .8s,
+    transform .8s;
 }
 
 .scene.active{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;   /* IMPORTANT */
 
-opacity:1;
+    transform:scale(1);
+}
 
-visibility:visible;
+#scene3{
+    z-index:20;
+}
 
-transform:scale(1);
-
+#giftClosed{
+    position:relative;
+    z-index:9999;
+    pointer-events:auto;
 }
 
 /* ==========================
