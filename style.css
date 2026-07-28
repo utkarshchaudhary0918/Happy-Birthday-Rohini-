@@ -373,6 +373,55 @@ translateY(-35px);
 
 }
 
+/* ---------- Magic Particles ---------- */
+
+#magicParticles{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:visible;
+    z-index:25;
+}
+
+.magicParticle{
+
+    position:absolute;
+
+    left:50%;
+    top:60%;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#fff7d8,#ffd86b,#b8862f);
+
+    box-shadow:
+    0 0 8px #ffd86b,
+    0 0 18px #ffd86b;
+
+    animation:particleBurst 1s ease-out forwards;
+}
+
+@keyframes particleBurst{
+
+0%{
+opacity:1;
+transform:
+translate(0,0)
+scale(.3);
+}
+
+100%{
+opacity:0;
+transform:
+translate(var(--x),var(--y))
+scale(1.4);
+}
+
+}
+
 /* ---------- Luxury Envelope ---------- */
 
 .letter-envelope{
