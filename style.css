@@ -779,7 +779,7 @@ filter:blur(0);
     pointer-events:none;
     z-index:0;
 }
-.album { position: relative; margin-top: 60px; width: 100%; max-width: 22rem; height: 330px; transform: scale(1.12); }
+.album { position: relative; margin-top: 75px; width: 100%; max-width: 22rem; height: 410px; transform: scale(1.12); }
 .polaroid {
   position: absolute; width: 112px; top: var(--top); left: var(--left);
   transform:
