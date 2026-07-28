@@ -113,33 +113,26 @@ showScene(2);
 // GIFT
 // =============================
 
-giftClosed.onclick=()=>{
+// =============================
+// GIFT
+// =============================
 
-giftClosed.style.pointerEvents="none";
+giftClosed.addEventListener("click", function () {
+    alert("Gift Clicked!");
 
-if(navigator.vibrate){
+    giftClosed.style.pointerEvents = "none";
 
-navigator.vibrate([120,60,120,60,250]);
+    giftClosed.classList.add("shake");
 
-}
+    goldLight.style.opacity = "1";
 
-giftClosed.classList.add("shake");
-
-goldLight.style.opacity="1";
-
-setTimeout(()=>{
-
-giftClosed.style.display="none";
-
-giftOpen.style.display="block";
-
-letter.classList.add("show");
-
-typeLetter();
-
-},1200);
-
-};
+    setTimeout(() => {
+        giftClosed.style.display = "none";
+        giftOpen.style.display = "block";
+        letter.classList.add("show");
+        typeLetter();
+    }, 1200);
+});
 
 // =============================
 // LETTER
