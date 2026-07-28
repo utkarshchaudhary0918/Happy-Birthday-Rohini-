@@ -902,8 +902,10 @@ body.android .album{
 /* iPhone only */
 @supports (-webkit-touch-callout: none) {
 
-    .scene[data-scene="album"] .stack{
-        transform: translateY(22px);
+    .scene[data-scene="album"] .eyebrow,
+    .scene[data-scene="album"] .section-title{
+        position: relative;
+        top: 22px;
     }
 
 }
