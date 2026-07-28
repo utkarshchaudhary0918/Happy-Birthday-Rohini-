@@ -934,19 +934,34 @@ body.android .album{
     transform:scale(1.02);
 }
 
-body.android .polaroid{
-    width:108px;
-}
-
-body.android .polaroid img{
-    height:108px;
-
-}
-
 body.android .scene[data-scene="album"] .sm{
     margin-top:30px;
 }
 
 body.android .scene[data-scene="album"] .mt-sm{
     margin-top:28px;
+}
+
+body.android .polaroid:nth-child(1){
+    top:-6% !important;
+}
+
+body.android .polaroid:nth-child(2){
+    top:-2% !important;
+}
+
+body.android .polaroid:nth-child(3){
+    top:34% !important;
+}
+
+body.android .polaroid:nth-child(4){
+    top:38% !important;
+}
+
+body.android .polaroid{
+    width:108px !important;
+}
+
+body.android .polaroid img{
+    height:108px !important;
 }
