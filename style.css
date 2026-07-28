@@ -896,7 +896,7 @@ filter:blur(0);
 }
 
 /* Android only */
-@media screen and (max-width:430px){
+@media (max-width:430px) and (hover:none) and (pointer:coarse){
 
     .scene[data-scene="album"]{
         overflow-y:auto;
