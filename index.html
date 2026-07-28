@@ -1,5 +1,107 @@
 
 <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<title>Happy Birthday Rohini</title>
+<meta name="description" content="A little surprise crafted with love — happy birthday, Rohini." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="sparkles" class="sparkles" aria-hidden="true"></div>
+
+<!-- 1. Landing -->
+<section class="scene" data-scene="landing">
+  <img src="moon.png" alt="" aria-hidden="true" class="moon" />
+  <div class="stack center">
+    <p class="eyebrow fade" style="--d:.4s">A little surprise</p>
+    <h1 class="title fade" style="--d:.7s">Happy<br><span class="italic">Birthday</span></h1>
+    <h2 class="script gold-gradient hero-name pop" style="--d:1.4s">Rohini</h2>
+    <div class="divider fade" style="--d:2s"><span></span>♡<span></span></div>
+    <p class="lede fade" style="--d:2.3s">Someone special deserves a special day. Wishing you a day as beautiful as you are.</p>
+    <div class="fade" style="--d:2.8s"><button class="gold-btn" data-next>Tap to Begin ✧</button></div>
+    <div class="down-arrow fade" style="--d:3.4s">↓</div>
+  </div>
+</section>
+
+<!-- 2. Cake -->
+<section class="scene" data-scene="cake" hidden>
+  <div class="stack center">
+    <p class="eyebrow">Make a Wish</p>
+    <h2 class="script gold-gradient section-title">Blow the candle</h2>
+
+    <div class="cake-stage">
+      <div class="cake-glow" id="cakeGlow"></div>
+      <img src="cake.png" alt="Birthday cake" class="cake-img" />
+      <div class="flame" id="flame">
+        <div class="flame-inner"></div>
+      </div>
+      <div class="smoke" id="smoke">˚༄</div>
+    </div>
+
+    <div id="cakeControls" class="stack center gap-sm">
+      <p class="italic muted" id="cakeHint">Blow into the mic — or tap the candle</p>
+      <div class="row gap-sm">
+        <button class="gold-btn" id="micBtn">Use Mic to Blow</button>
+        <button class="gold-btn" id="tapBtn">Tap the Candle</button>
+      </div>
+    </div>
+    <p class="script gold-gradient section-title" id="wishGranted" hidden>Wish granted ✨</p>
+  </div>
+</section>
+
+<!-- 3. Gift -->
+<section class="scene" data-scene="gift" hidden>
+  <div class="stack center">
+    <p class="eyebrow">A Special Surprise</p>
+    <h2 class="script gold-gradient section-title">Just for you</h2>
+
+    <div class="gift-stage">
+      <div class="gift-glow"></div>
+      <button id="giftBtn" class="gift-btn drift" aria-label="Open gift">
+        <img src="giftbox.png" alt="Gift box" class="gift-img" id="giftClosed" />
+      </button>
+      <img src="giftopen.png" alt="Opened gift" class="gift-img gift-open" id="giftOpen" hidden />
+    </div>
+
+    <p class="italic muted" id="giftHint">Tap the gift box</p>
+  </div>
+</section>
+
+<!-- 4. Card -->
+<section class="scene" data-scene="card" hidden>
+  <div class="stack center">
+    <p class="eyebrow">A Little Note</p>
+    <h2 class="script gold-gradient section-title">For you ♡</h2>
+
+    <div class="card-envelope">
+      <div class="card">
+        <span class="corner tl">✦</span><span class="corner tr">✦</span>
+        <span class="corner bl">✦</span><span class="corner br">✦</span>
+        <p class="script gold-gradient card-title">Happy Birthday</p>
+        <p class="script gold-gradient card-sub">Rohini</p>
+        <div class="divider small"><span></span>♡<span></span></div>
+        <p class="card-body">May this year bring you endless happiness, beautiful moments, good health, and all the success your heart deserves. You are amazing just the way you are — keep believing in yourself.</p>
+        <p class="script signoff">— with love</p>
+      </div>
+    </div>
+
+    <div class="mt-md"><button class="gold-btn" data-next>Next ✧</button></div>
+  </div>
+</section>
+
+<!-- 5. Album -->
+<section class="scene" data-scene="album" hidden>
+  <img src="lights.jpg" alt="" aria-hidden="true" class="lights" />
+  <div class="stack center">
+    <p class="eyebrow">Some Beautiful</p>
+    <h2 class="script gold-gradient section-title">Memories</h2>
+
+    <div class="album">
       <div class="polaroid" style="--r:-6deg;--top:0%;--left:6%"><div class="tape"></div><img src="photo1.jpg" alt="" /></div>
       <div class="polaroid" style="--r:5deg;--top:4%;--left:54%"><div class="tape"></div><img src="photo2.jpg" alt="" /></div>
       <div class="polaroid" style="--r:-3deg;--top:45%;--left:2%"><div class="tape"></div><img src="photo3.jpg" alt="" /></div>
