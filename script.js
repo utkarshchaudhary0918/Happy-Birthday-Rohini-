@@ -80,9 +80,7 @@
     cakeControls.hidden = true;
     wishGranted.hidden = false;
 
-requestAnimationFrame(function () {
-    wishGranted.classList.add("show");
-});
+wishGranted.hidden = false;
     setTimeout(function () { show("gift"); }, 2200);
   }
   tapBtn.addEventListener("click", blowOutCandle);
