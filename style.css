@@ -176,28 +176,29 @@ drop-shadow(0 0 40px rgba(255,220,120,.25));
 
 
 #wishGranted{
-    position: fixed;
-    inset: 0;
+    position:fixed;
+    inset:0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    font-family: "Great Vibes", cursive;
-    font-size: 54px;
-    color: #f7e8b5;
-    text-shadow: 0 0 25px rgba(232,197,106,.9);
+    font-family:"Great Vibes",cursive;
+    font-size:54px;
 
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100000;
+    color:#f7e8b5;
+    text-shadow:0 0 25px rgba(232,197,106,.9);
 
-    transition: opacity .5s ease;
+    opacity:0;
+    pointer-events:none;
+
+    z-index:99999;
+
+    transition:opacity .5s ease;
 }
 
 #wishGranted.show{
     opacity:1;
-    visibility:visible;
 }
 /* Gift */
 .gift-stage { position: relative; margin-top: 32px; width: 100%; height: 320px; display: flex; align-items: center; justify-content: center; }
@@ -339,4 +340,13 @@ drop-shadow(0 0 40px rgba(255,220,120,.25));
   .polaroid { width: 160px; padding: 8px 8px 32px; }
   .polaroid > img { height: 176px; }
   .thanks-title { font-size: 96px; }
+}
+
+.scene{
+    transition:filter .6s ease, opacity .6s ease;
+}
+
+.scene.blur{
+    filter:blur(10px);
+    opacity:.35;
 }
