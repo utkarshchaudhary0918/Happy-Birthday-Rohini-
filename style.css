@@ -876,20 +876,25 @@ filter:blur(0);
 
 @media screen and (max-width:430px){
 
-.scene[data-scene="album"]{
+    /* Keep lights same size */
+    .lights{
+        height:160px;
+        object-fit:cover;
+        object-position:center top;
+    }
 
-    justify-content:flex-start;
+    /* Move heading into the lights */
+    .scene[data-scene="album"] .eyebrow{
+        margin-top:-28px;
+    }
 
-    padding-top:80px;
+    .scene[data-scene="album"] .section-title{
+        margin-top:-12px;
+    }
 
-.scene[data-scene="album"] .stack{
-    transform:translateY(-32px);
-}
-
-.lights{
-    height:220px;
-    object-fit:cover;
-    object-position:center top;
-}
+    /* Move the photo collage upward */
+    .album{
+        margin-top:-45px;
+    }
 
 }
