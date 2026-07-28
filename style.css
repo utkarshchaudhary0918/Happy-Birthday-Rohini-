@@ -925,8 +925,32 @@ body.ios .polaroid img{
 /* Android Album */
 
 
-body.android .album{
+/* Android Album */
 
-    transform:scale(1.02) !important;
+body.android .scene[data-scene="album"]{
+    overflow:hidden;
 }
 
+body.android .album{
+    margin-top:70px !important;
+    margin-left:6px !important;
+    width:320px !important;
+    height:350px !important;
+    transform:none !important;
+}
+
+body.android .polaroid{
+    width:112px !important;
+}
+
+body.android .polaroid img{
+    height:112px !important;
+}
+
+body.android .scene[data-scene="album"] .sm{
+    margin-top:20px !important;
+}
+
+body.android .scene[data-scene="album"] .mt-sm{
+    margin-top:18px !important;
+}
