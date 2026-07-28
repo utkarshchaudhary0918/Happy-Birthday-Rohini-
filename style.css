@@ -937,8 +937,18 @@ body.android .album{
     transform:scale(1.20);
 }
 
+/* iPhone Album */
+body.ios .scene[data-scene="album"] .eyebrow{
+    margin-top:42px !important;
+}
+
+body.ios .scene[data-scene="album"] .section-title{
+    margin-top:14px !important;
+    margin-bottom:18px !important;
+}
+
 body.ios .album{
-    margin-top:42px;
-    margin-left:10px;
-    transform:scale(1.10);
+    margin-top:70px !important;
+    margin-left:0 !important;
+    transform:scale(1.05) !important;
 }
