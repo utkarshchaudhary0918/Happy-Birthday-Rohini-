@@ -876,25 +876,20 @@ filter:blur(0);
 
 @media screen and (max-width:430px){
 
-    /* Keep lights same size */
-    .lights{
-        height:160px;
-        object-fit:cover;
-        object-position:center top;
-    }
+.scene[data-scene="album"] .polaroid{
+    top:calc(var(--top) - 30px);
+}
 
-    /* Move heading into the lights */
-    .scene[data-scene="album"] .eyebrow{
-        margin-top:-28px;
-    }
+.scene[data-scene="album"] .eyebrow{
+    margin-top:-18px;
+}
 
-    .scene[data-scene="album"] .section-title{
-        margin-top:-12px;
-    }
+.scene[data-scene="album"] .section-title{
+    margin-top:-8px;
+}
 
-    /* Move the photo collage upward */
-    .album{
-        margin-top:-45px;
-    }
+.lights{
+    height:160px;
+}
 
 }
