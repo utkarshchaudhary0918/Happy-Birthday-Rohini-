@@ -529,3 +529,17 @@ z-index:8;
     filter:blur(10px);
     opacity:.35;
 }
+
+#flash{
+    position:fixed;
+    inset:0;
+    background:white;
+    opacity:0;
+    pointer-events:none;
+    z-index:999999;
+    transition:opacity .15s;
+}
+
+#flash.show{
+    opacity:1;
+}
