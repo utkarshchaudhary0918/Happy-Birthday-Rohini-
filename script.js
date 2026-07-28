@@ -233,9 +233,7 @@ setTimeout(function () {
 }, 800);
 });
 })();
-if (/Android/i.test(navigator.userAgent)) {
-    document.body.classList.add("android");
-}
+alert("JS is running");
 
 alert(document.body.className);
 
