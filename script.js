@@ -39,20 +39,36 @@
   });
 
   function show(name) {
+
     order.forEach(function (n) {
-      var el = scenes[n];
-      if (n === name) {
-        el.hidden = false;
-        // reset animation
-        el.style.animation = "none";
-        void el.offsetWidth;
-        el.style.animation = "";
-      } else {
-        el.hidden = true;
-      }
+
+        var el = scenes[n];
+
+        if (n === name) {
+
+            el.hidden = false;
+
+            el.classList.remove("active");
+
+            void el.offsetWidth;
+
+            requestAnimationFrame(function () {
+                el.classList.add("active");
+            });
+
+        } else {
+
+            el.classList.remove("active");
+
+            el.hidden = true;
+
+        }
+
     });
+
     window.scrollTo(0, 0);
-  }
+
+}
 
   document.querySelectorAll("[data-next]").forEach(function (btn) {
     btn.addEventListener("click", function () {
