@@ -11,7 +11,12 @@ body {
     radial-gradient(ellipse at 20% 90%, rgba(232,197,106,.08) 0%, transparent 50%);
 }
 
-.script { font-family: "Great Vibes", cursive; }
+.script{
+    font-family:"Great Vibes", cursive;
+    line-height:1.35;
+    padding-inline:12px;
+    display:inline-block;
+}
 .italic { font-style: italic; }
 .muted { color: rgba(245,233,201,.8); }
 .sm { font-size: 14px; }
@@ -51,8 +56,18 @@ body {
   margin-top: 24px; font-weight: 300; font-size: 40px; line-height: 1.1;
   color: #f5e9c9;
 }
-.hero-name { margin-top: 12px; font-size: 64px; line-height: 1; }
-.section-title { margin-top: 12px; font-size: 40px; }
+.hero-name{
+    margin-top:12px;
+    font-size:64px;
+    line-height:1.25;
+    padding-left:10px;
+}
+.section-title{
+    margin-top:12px;
+    font-size:40px;
+    line-height:1.25;
+    padding-left:8px;
+}
 .divider { margin-top: 24px; display: flex; align-items: center; gap: 12px; color: #e8c56a; }
 .divider span { height: 1px; width: 40px; background: linear-gradient(to right, transparent, #e8c56a); }
 .divider span:last-child { background: linear-gradient(to left, transparent, #e8c56a); }
@@ -96,9 +111,12 @@ body {
 /* Moon */
 .moon {
   position: absolute; right: 12px; top: 16px;
-  width: 112px; height: 112px; opacity: .7; mix-blend-mode: screen;
+  width: 140px; height: 140px; opacity: .7; mix-blend-mode: screen;
   animation: moonFloat 8s ease-in-out infinite;
   pointer-events: none;
+  filter:
+
+        drop-shadow(0 0 18px rgba(255,220,120,.45));
 }
 @keyframes moonFloat {
   0%,100% { transform: translateY(0) rotate(0) }
@@ -131,7 +149,13 @@ body {
   filter: blur(1px);
   box-shadow: 0 -6px 24px 6px rgba(255,180,80,.7), 0 0 60px 20px rgba(255,140,40,.25);
 }
-.cake-stage.blown .flame { opacity: 0; transform: translate(-50%, -20px) scale(0); transition: all .4s; }
+.cake-stage.blown .flame{
+    animation:none;
+    opacity:0;
+    visibility:hidden;
+    transform:translate(-50%,-20px) scale(0);
+    transition:opacity .3s, transform .3s;
+}
 @keyframes flicker {
   0%,100% { transform: translateX(-50%) scaleY(1) scaleX(1); opacity: 1 }
   25% { transform: translateX(-50%) scaleY(1.1) scaleX(.95); opacity: .9 }
