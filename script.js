@@ -166,4 +166,4 @@ setTimeout(function () {
 
 }, 800);
 });
-    ();
+})();
