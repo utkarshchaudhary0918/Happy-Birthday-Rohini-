@@ -63,8 +63,8 @@
   });
 
   document.getElementById("restart").addEventListener("click", function () {
-    show("landing");
-  });
+    window.location.reload();
+});
 
   /* ---------- Cake scene ---------- */
   var cakeStage = document.querySelector(".cake-stage");
@@ -79,6 +79,10 @@
     cakeStage.classList.add("blown");
     cakeControls.hidden = true;
     wishGranted.hidden = false;
+
+requestAnimationFrame(function () {
+    wishGranted.classList.add("show");
+});
     setTimeout(function () { show("gift"); }, 2200);
   }
   tapBtn.addEventListener("click", blowOutCandle);
