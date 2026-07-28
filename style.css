@@ -874,16 +874,32 @@ filter:blur(0);
     opacity:1;
 }
 
-@media (max-height:700px){
+/* Redmi / Android phones */
+@media screen and (max-width:430px) and (max-height:920px){
 
+    /* Move everything upward */
     .scene[data-scene="album"] .stack{
-        transform: translateY(-22px);
+        margin-top:-18px;
+    }
+
+    /* Bring photos closer to the lights */
+    .album{
+        margin-top:-22px;
+    }
+
+    /* Raise the heading slightly */
+    .scene[data-scene="album"] .eyebrow{
+        margin-top:-8px;
+    }
+
+    .scene[data-scene="album"] .section-title{
+        margin-top:2px;
+    }
+
+    /* Slightly taller lights */
+    .lights{
+        height:180px;
+        object-position:center top;
     }
 
 }
-
-.scene[data-scene="album"]{
-    justify-content:flex-start;
-    padding-top:35px;
-}
-
