@@ -80,18 +80,21 @@
 cakeControls.hidden = true;
 
 // Let the smoke finish first
+// Let the smoke finish
 setTimeout(function () {
-    wishGranted.hidden = false;
 
-    requestAnimationFrame(function () {
-        wishGranted.classList.add("show");
-    });
-}, 1400);
+    // Blur the whole cake section
+    document.querySelector('[data-scene="cake"]').classList.add("blur");
 
-// Show gift after the message
+    // Show the text
+    wishGranted.classList.add("show");
+
+}, 2000);
+
+// Go to gift after a short pause
 setTimeout(function () {
     show("gift");
-}, 3000);
+}, 4000);
   }
   tapBtn.addEventListener("click", blowOutCandle);
 
