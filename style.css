@@ -886,17 +886,21 @@ filter:blur(0);
 
 @media screen and (max-width:430px){
 
-    .scene[data-scene="album"] .eyebrow{
-    margin-top:-55px;
-}
+    .scene[data-scene="album"]{
+        padding-top:120px;
+    }
 
-.scene[data-scene="album"] .section-title{
-    margin-top:-40px;
-}
+    .scene[data-scene="album"] .eyebrow{
+        margin-top:0;
+    }
+
+    .scene[data-scene="album"] .section-title{
+        margin-top:6px;
+    }
 
     .album{
         transform:scale(1.12);
-        margin-top:8px;
+        margin-top:20px;
     }
 
 }
