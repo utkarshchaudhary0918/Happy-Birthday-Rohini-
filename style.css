@@ -768,7 +768,7 @@ filter:blur(0);
         rotate(var(--r))
 
         scale(.8); opacity: 0;
-  animation: polaroidIn .9s cubic-bezier(.3,.9,.4,1.3) forwards;
+  animation: polaroidIn .2s cubic-bezier(.3,.9,.4,1.3) forwards;
   transition: transform .3s;
 }
 .polaroid:nth-child(1) { animation-delay: .3s }
