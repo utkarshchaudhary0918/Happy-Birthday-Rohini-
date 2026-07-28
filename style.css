@@ -896,25 +896,25 @@ filter:blur(0);
 }
 
 /* Android only */
-@media (max-width:430px){
+@media screen and (max-width:430px){
 
     .scene[data-scene="album"]{
         overflow-y:auto;
         padding-bottom:120px;
     }
 
-    .scene[data-scene="album"] .eyebrow{
-        margin-top:20px;
-    }
-
-    .scene[data-scene="album"] .section-title{
-        margin-top:5px;
-    }
-
     .album{
-        margin-top:15px;
+        margin-top:5px;
         margin-left:12px;
-        transform:scale(1.30);
+        transform:scale(1.33);
+    }
+
+    .polaroid{
+        width:128px;
+    }
+
+    .polaroid > img{
+        height:128px;
     }
 
 }
