@@ -1,5 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; overflow-y: hidden; }
 body {
   font-family: "Cormorant Garamond", serif;
   background: #05030a;
@@ -30,7 +30,8 @@ body {
 /* Scene layout */
 .scene {
   position: relative;
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
   width: 100%;
   display: flex;
   align-items: center;
