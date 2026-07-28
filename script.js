@@ -77,15 +77,21 @@
   function blowOutCandle() {
     if (cakeStage.classList.contains("blown")) return;
     cakeStage.classList.add("blown");
-    cakeControls.hidden = true;
+cakeControls.hidden = true;
 
-wishGranted.hidden = false;
+// Let the smoke finish first
+setTimeout(function () {
+    wishGranted.hidden = false;
 
-requestAnimationFrame(function () {
-    wishGranted.classList.add("show");
-});
-    setTimeout(function () { show("gift"); }, 2800);
-  }
+    requestAnimationFrame(function () {
+        wishGranted.classList.add("show");
+    });
+}, 1400);
+
+// Show gift after the message
+setTimeout(function () {
+    show("gift");
+}, 3000);
   tapBtn.addEventListener("click", blowOutCandle);
 
   micBtn.addEventListener("click", function () {
