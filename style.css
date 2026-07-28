@@ -72,7 +72,7 @@ body {
 .divider span { height: 1px; width: 40px; background: linear-gradient(to right, transparent, #e8c56a); }
 .divider span:last-child { background: linear-gradient(to left, transparent, #e8c56a); }
 .divider.small span { width: 32px; }
-.lede { margin-top: 8px; max-width: 20rem; font-size: 17px; line-height: 1.55; color: rgba(245,233,201,.9); }
+.lede { margin-top: 14px; max-width: 20rem; font-size: 17px; line-height: 1.55; color: rgba(245,233,201,.9); }
 .down-arrow { margin-top: 40px; color: rgba(245,233,201,.6); animation: bob 2s infinite ease-in-out; }
 @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
 
@@ -116,9 +116,10 @@ body {
   width: 110px; height: 110px; opacity: .7; mix-blend-mode: screen;
   animation: moonFloat 8s ease-in-out infinite;
   pointer-events: none;
-  filter:
 
-        drop-shadow(0 0 18px rgba(255,220,120,.45));
+        filter:
+drop-shadow(0 0 18px rgba(255,220,120,.5))
+drop-shadow(0 0 40px rgba(255,220,120,.25));
 }
 @keyframes moonFloat {
   0%,100% { transform: translateY(0) rotate(0) }
@@ -128,7 +129,7 @@ body {
 }
 
 /* Cake */
-.cake-stage { position: relative; margin-top: 8px; width: 100%; height: 290px; display: flex; align-items: flex-end; justify-content: center; }
+.cake-stage { position: relative; margin-top: 12px; width: 100%; height: 250px; display: flex; align-items: flex-end; justify-content: center; }
 .cake-glow {
   position: absolute; left: 50%; top: 16px; transform: translateX(-50%);
   width: 220px; height: 220px; border-radius: 50%;
@@ -138,8 +139,8 @@ body {
 }
 .cake-stage.blown .cake-glow { animation: none; opacity: 0; transition: opacity .4s; }
 @keyframes pulseGlow { 0%,100% { opacity: .5 } 50% { opacity: .9 } }
-.cake-img { position: relative; z-index: 1; height: 280px; width: auto; object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); transform: translateY(-10px); }
+.cake-img { position: relative; z-index: 1; height: 230px; width: auto; object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); transform: translateY(0px); }
 .flame {
   position: absolute; left: 50%; top: 18%; transform: translateX(-50%);
   z-index: 2; height: 32px; width: 12px;
@@ -175,13 +176,28 @@ body {
 
 #wishGranted{
     position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    z-index:20;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(8px);
+    background:rgba(5,3,10,.28);
+
+    font-size:42px;
+    text-align:center;
 
     opacity:0;
-    transition:.4s;
+    visibility:hidden;
+
+    transition:.5s;
+    z-index:20;
+}
+
+#wishGranted.show{
+    opacity:1;
+    visibility:visible;
 }
 /* Gift */
 .gift-stage { position: relative; margin-top: 32px; width: 100%; height: 320px; display: flex; align-items: center; justify-content: center; }
