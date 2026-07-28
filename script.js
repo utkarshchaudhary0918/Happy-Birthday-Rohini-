@@ -241,7 +241,3 @@ if (/Android/i.test(ua)) {
     document.body.classList.add("ios");
 }
 
-alert(navigator.userAgent);
-
-alert(document.body.className);
-
