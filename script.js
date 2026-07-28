@@ -78,14 +78,13 @@
     if (cakeStage.classList.contains("blown")) return;
     cakeStage.classList.add("blown");
     cakeControls.hidden = true;
-    wishGranted.hidden = false;
 
 wishGranted.hidden = false;
 
 requestAnimationFrame(function () {
-    wishGranted.style.opacity = "1";
+    wishGranted.classList.add("show");
 });
-    setTimeout(function () { show("gift"); }, 2200);
+    setTimeout(function () { show("gift"); }, 2800);
   }
   tapBtn.addEventListener("click", blowOutCandle);
 
