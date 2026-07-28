@@ -233,6 +233,46 @@ drop-shadow(0 0 40px rgba(255,220,120,.25));
 .gift-open.reveal { animation: giftReveal .9s ease-out; }
 @keyframes giftReveal { from { opacity: 0; transform: scale(.85) translateY(10px) } to { opacity: 1; transform: scale(1.08) translateY(-6px) } }
 
+.letter-envelope{
+    position:absolute;
+    width:170px;
+
+    left:50%;
+    bottom:110px;
+
+    transform:translateX(-50%) translateY(70px) scale(.6);
+
+    opacity:0;
+
+    z-index:20;
+}
+
+.letter-envelope.fly{
+    animation:letterFly 1.6s ease forwards;
+}
+
+@keyframes letterFly{
+
+0%{
+opacity:0;
+transform:translateX(-50%) translateY(80px) scale(.5);
+}
+
+25%{
+opacity:1;
+}
+
+70%{
+transform:translateX(-50%) translateY(-80px) scale(.95);
+}
+
+100%{
+opacity:1;
+transform:translateX(-50%) translateY(-150px) scale(1);
+}
+
+}
+
 /* Card */
 .card-envelope {
   margin-top: 20px; width: 100%; max-width: 22rem;
