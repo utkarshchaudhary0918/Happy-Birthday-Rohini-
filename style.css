@@ -1011,3 +1011,14 @@ outline:3px solid red;
 .giftContainer{
 outline:2px solid lime;
 }
+
+
+#scene2{
+    background:red !important;
+    opacity:.2 !important;
+}
+
+#scene3{
+    background:blue !important;
+    opacity:.2 !important;
+}
