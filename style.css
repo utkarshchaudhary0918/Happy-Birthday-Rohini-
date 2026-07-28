@@ -874,18 +874,20 @@ filter:blur(0);
     opacity:1;
 }
 
-/* Redmi / Android phones */
 @media screen and (max-width:430px){
 
-.scene[data-scene="album"] .eyebrow{
-    margin-top:-32px;
+.scene[data-scene="album"]{
+    padding-top:0;
 }
 
-.scene[data-scene="album"] .section-title{
-    margin-top:-6px;
+.scene[data-scene="album"] .stack{
+    transform:translateY(-32px);
 }
 
 .lights{
-    top:-28px;
+    height:220px;
+    object-fit:cover;
+    object-position:center top;
 }
+
 }
