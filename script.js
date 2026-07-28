@@ -236,3 +236,6 @@ setTimeout(function () {
 if (/Android/i.test(navigator.userAgent)) {
     document.body.classList.add("android");
 }
+
+alert(document.body.className);
+
