@@ -167,7 +167,7 @@ body {
   color: rgba(245,233,201,.5); font-size: 30px; opacity: 0; z-index: 3;
 }
 .cake-stage.blown .smoke { animation: smokeRise 2s ease forwards; }
-@keyframes smokeRise { 0% { opacity: 0; transform: translate(-50%,0) } 40% { opacity: .7 } 100% { opacity: 0; transform: translate(-50%,-
+@keyframes smokeRise { 0% { opacity: 0; transform: translate(-50%,0) } 40% { opacity: .7; transform: translate(-50%, -25px); } 100% { opacity: 0; transform: translate(-50%,-80px);}}
 
   
 /* Gift */
