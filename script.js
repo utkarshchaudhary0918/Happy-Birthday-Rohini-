@@ -130,7 +130,7 @@
       giftOpen.hidden = false;
       giftOpen.classList.add("reveal");
       giftHint.textContent = "Opening…";
-      setTimeout(function () { show("card"); }, 2800);
+      setTimeout(function () { show("card"); }, 2000);
     }, 800);
   });
 })();
