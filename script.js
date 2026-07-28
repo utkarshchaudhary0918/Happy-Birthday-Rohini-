@@ -117,22 +117,27 @@ showScene(2);
 // GIFT
 // =============================
 
-giftClosed.addEventListener("click", function () {
-    alert("Gift Clicked!");
+// =============================
+// GIFT
+// =============================
 
-    giftClosed.style.pointerEvents = "none";
+alert("Gift section reached");
 
-    giftClosed.classList.add("shake");
+if (giftClosed) {
 
-    goldLight.style.opacity = "1";
+    alert("Gift element found");
 
-    setTimeout(() => {
-        giftClosed.style.display = "none";
-        giftOpen.style.display = "block";
-        letter.classList.add("show");
-        typeLetter();
-    }, 1200);
-});
+    giftClosed.addEventListener("click", function () {
+
+        alert("Gift clicked!");
+
+    });
+
+} else {
+
+    alert("Gift element NOT found");
+
+}
 
 // =============================
 // LETTER
