@@ -910,11 +910,11 @@ filter:blur(0);
     }
 
     .polaroid{
-        width:128px;
+        width:10px;
     }
 
     .polaroid > img{
-        height:128px;
+        height:60px;
     }
 
 }
