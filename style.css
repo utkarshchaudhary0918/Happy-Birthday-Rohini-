@@ -13,8 +13,7 @@ body {
 
 .script{
     font-family:"Great Vibes", cursive;
-    line-height:1.35;
-    padding-inline:12px;
+    line-height:1.25;
     display:inline-block;
 }
 .italic { font-style: italic; }
@@ -227,7 +226,11 @@ body {
 .card-title { text-align: center; font-size: 30px; margin: 0; }
 .card-sub { text-align: center; font-size: 26px; margin: 4px 0 0; }
 .card-body { margin-top: 16px; font-size: 14px; line-height: 1.6; color: rgba(245,233,201,.9); }
-.signoff { text-align: right; margin-top: 12px; color: #e8c56a; font-size: 22px; }
+.signoff{
+    text-align:right;
+    margin-top:12px;
+    padding-right:20px;
+}
 
 /* Album */
 .lights { position: absolute; inset: 0 0 auto 0; height: 160px; width: 100%; object-fit: cover; opacity: .7; mix-blend-mode: screen; pointer-events: none; }
