@@ -896,46 +896,7 @@ filter:blur(0);
 }
 
 /* Android only */
-@media (max-width:430px) and (hover:none) and (pointer:coarse){
 
-    .scene[data-scene="album"]{
-
-        overflow-y:auto;
-
-        padding-bottom:120px;
-
-    }
-
-    .album{
-
-        margin-top:5px;
-
-        margin-left:12px;
-
-        transform:scale(1.33);
-
-    }
-
-    .polaroid{
-
-        width:128px;
-
-    }
-
-    .polaroid > img{
-
-        height:128px;
-    }
-
-}
-/* iPhone only */
-
-
-body.android .album{
-    margin-top:18px;
-    margin-left:6px;
-    transform:scale(1.20);
-}
 
 /* iPhone Album */
 body.ios .scene[data-scene="album"] .eyebrow{
