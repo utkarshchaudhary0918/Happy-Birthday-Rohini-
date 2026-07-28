@@ -879,8 +879,8 @@ filter:blur(0);
 
     /* Move everything upward */
     .scene[data-scene="album"] .stack{
-        margin-top:-18px;
-    }
+    transform:translateY(-25px);
+}
 
     /* Bring photos closer to the lights */
     .album{
