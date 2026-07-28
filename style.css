@@ -291,13 +291,13 @@ rotate(540deg);
 }
 
 100%{
-transform:
-translateX(-50%)
-translateY(-320px)
-scale(9)
-rotate(1080deg);
+    transform:
+    translateX(-50%)
+    translateY(-320px)
+    scale(9)
+    rotate(1080deg);
 
-opacity:0;
+    opacity:1;
 }
 
 }
