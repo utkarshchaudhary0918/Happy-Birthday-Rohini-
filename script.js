@@ -93,6 +93,11 @@ setTimeout(function () {
 
 // Go to gift after a short pause
 setTimeout(function () {
+    wishGranted.classList.remove("show");
+}, 3400);
+
+setTimeout(function () {
+    document.querySelector('[data-scene="cake"]').classList.remove("blur");
     show("gift");
 }, 4000);
   }
