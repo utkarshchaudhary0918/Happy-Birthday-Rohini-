@@ -1,4 +1,86 @@
 (function () {
+  "use strict";
+
+  /* ---------- Sparkles ---------- */
+  var sparkles = document.getElementById("sparkles");
+  for (var i = 0; i < 40; i++) {
+    var s = document.createElement("span");
+    var size = Math.random() * 3 + 1;
+    s.style.left = Math.random() * 100 + "%";
+    s.style.top = Math.random() * 100 + "%";
+    s.style.width = size + "px";
+    s.style.height = size + "px";
+    s.style.animationDelay = Math.random() * 3 + "s";
+    sparkles.appendChild(s);
+  }
+
+  /* ---------- Confetti ---------- */
+  var confetti = document.getElementById("confetti");
+  var colors = ["#e8c56a", "#f2dfa4", "#b8862f", "#ffd580"];
+  for (var j = 0; j < 30; j++) {
+    var b = document.createElement("span");
+    var size2 = 4 + Math.random() * 6;
+    var dur = 3 + Math.random() * 3;
+    b.style.left = Math.random() * 100 + "%";
+    b.style.width = size2 + "px";
+    b.style.height = size2 * 1.6 + "px";
+    b.style.background = colors[j % colors.length];
+    b.style.animationDuration = dur + "s";
+    b.style.animationDelay = Math.random() * 2 + "s";
+    b.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+    confetti.appendChild(b);
+  }
+
+  /* ---------- Scene navigation ---------- */
+  var order = ["landing", "cake", "gift", "card", "album", "message", "thanks"];
+  var scenes = {};
+  order.forEach(function (name) {
+    scenes[name] = document.querySelector('[data-scene="' + name + '"]');
+  });
+
+  function show(name) {
+    order.forEach(function (n) {
+      var el = scenes[n];
+      if (n === name) {
+        el.hidden = false;
+        // reset animation
+        el.style.animation = "none";
+        void el.offsetWidth;
+        el.style.animation = "";
+      } else {
+        el.hidden = true;
+      }
+    });
+    window.scrollTo(0, 0);
+  }
+
+  document.querySelectorAll("[data-next]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var current = btn.closest(".scene").getAttribute("data-scene");
+      var idx = order.indexOf(current);
+      if (idx >= 0 && idx < order.length - 1) show(order[idx + 1]);
+    });
+  });
+
+  document.getElementById("restart").addEventListener("click", function () {
+    show("landing");
+  });
+
+  /* ---------- Cake scene ---------- */
+  var cakeStage = document.querySelector(".cake-stage");
+  var cakeControls = document.getElementById("cakeControls");
+  var wishGranted = document.getElementById("wishGranted");
+  var tapBtn = document.getElementById("tapBtn");
+  var micBtn = document.getElementById("micBtn");
+  var cakeHint = document.getElementById("cakeHint");
+
+  function blowOutCandle() {
+    if (cakeStage.classList.contains("blown")) return;
+    cakeStage.classList.add("blown");
+    cakeControls.hidden = true;
+    wishGranted.hidden = false;
+    setTimeout(function () { show("gift"); }, 2200);
+  }
   tapBtn.addEventListener("click", blowOutCandle);
 
   micBtn.addEventListener("click", function () {
