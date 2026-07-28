@@ -883,7 +883,10 @@ filter:blur(0);
 .scene[data-scene="album"] .section-title{
     margin-top:0;
     line-height:1;
-    margin-bottom:-30px;
+    margin-bottom:-40px;
 }
+.scene[data-scene="album"] .script{
 
+    padding:0;
+  
 }
