@@ -145,7 +145,11 @@ var magicText = document.getElementById("magicText");
     if (shaking) return;
     shaking = true;
     giftBtn.classList.remove("drift");
-    giftBtn.classList.add("magicShake");
+    giftBtn.classList.add("shake");
+
+if (navigator.vibrate) {
+    navigator.vibrate([200, 80, 200, 80, 300]);
+}
     giftHint.textContent = "Shaking…";
     setTimeout(function () {
     magicGlow.classList.add("show");
