@@ -813,13 +813,7 @@ filter:blur(0);
 .restart { margin-top: 20px; background: transparent; border: 0; color: rgba(245,233,201,.6); font-family: "Inter", sans-serif; letter-spacing: .3em; font-size: 11px; text-transform: uppercase; cursor: pointer; }
 .restart:hover { color: #e8c56a; }
 
-@media (max-height:700px){
 
-.album{
-    margin-top:-30px;
-}
-
-}
 
 /* Confetti */
 .confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
