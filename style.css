@@ -902,9 +902,8 @@ body.android .album{
 /* iPhone only */
 @supports (-webkit-touch-callout: none) {
 
-    .scene[data-scene="album"]{
-        align-items:flex-start;
-        padding-top:55px;
+    .scene[data-scene="album"] .stack{
+        transform: translateY(22px);
     }
 
 }
