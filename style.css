@@ -924,37 +924,9 @@ body.ios .polaroid img{
 
 /* Android Album */
 
-body.android .scene[data-scene="album"]{
-    overflow-y:auto;
-    padding-bottom:190px;
-}
 
 body.android .album{
-    height:390px !important;
-    margin-top:58px !important;
-
-    margin-left:6px !important;
 
     transform:scale(1.02) !important;
 }
 
-body.android .polaroid{
-    width:110px !important;
-}
-
-body.android .polaroid img{
-    height:110px !important;
-}
-
-
-
-body.android .scene[data-scene="album"] .sm{
-
-    margin-top:8px !important;
-
-}
-
-body.android .scene[data-scene="album"] .mt-sm{
-
-    margin-top:16px !important;
-}
